@@ -6,5 +6,9 @@
     "@actions/glob": "^0.4.0",
     "nodemailer": "^6.10.1",
     "showdown": "^1.9.1"
+  },
+  "scripts": {
+    "mail-server": "podman run -d --rm --replace --name smtp4dev -p 8080:80 -p 2525:25 docker.io/rnwood/smtp4dev",
+    "test": "./test.js"
   }
 }
